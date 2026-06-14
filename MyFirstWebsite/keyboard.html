@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Web: Клавиатура</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/keyboard.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/keyboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="headerList">
+                <li class="listItem"><a class="blackLink" href="index.html">Главная</a></li>
+                <li class="listItem"><a class="blackLink" href="info.html">О сайте</a></li>
+                <li id="dropdown" class="listItem"><button type="button" id="dropdownButton">Программы ▼</button>
+                    <ul class="dropdownMenu">
+                        <li><span>🧮</span><a class="blackLink" href="calculator.html">Калькулятор</a></li>
+                        <li><span>🐍</span><a class="blackLink" href="snake.html">Змейка</a></li>
+                        <li><span>⚪</span><a class="blackLink" href="#">Шашки</a></li>
+                        <li><span>♟️</span><a class="blackLink" href="#">Шахматы</a></li>
+                        <li><span>⌨️</span>Клавиатура</li>
+                        <li><span>🎰</span><a class="blackLink" href="#">Казино</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="startText">Интерактивная клавиатура</h2>
+    <main>
+        <div id="containerKeyboard">
+            <svg id="keyboard" viewBox="10 10 480 120" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <style>
+                    .key{fill:#fff;stroke:#aaa;stroke-width:0.5}
+                    .key-dark{fill:#ccc;stroke:#aaa;stroke-width:0.5}
+                    .kl{font-family:monospace;font-size:7px;fill:#222}
+                    .kls{font-family:monospace;font-size:6px;fill:#555}
+                    </style>
+                </defs>
+                <rect id="Escape" x="20" y="20" width="22" height="16" rx="2" class="key"/><text x="31" y="31" text-anchor="middle" class="kls">Esc</text>
+                <rect id="F1" x="48" y="20" width="18" height="16" rx="2" class="key"/><text x="57" y="31" text-anchor="middle" class="kl">F1</text>
+                <rect id="F2" x="68" y="20" width="18" height="16" rx="2" class="key"/><text x="77" y="31" text-anchor="middle" class="kl">F2</text>
+                <rect id="F3" x="88" y="20" width="18" height="16" rx="2" class="key"/><text x="97" y="31" text-anchor="middle" class="kl">F3</text>
+                <rect id="F4" x="108" y="20" width="18" height="16" rx="2" class="key"/><text x="117" y="31" text-anchor="middle" class="kl">F4</text>
+                <rect id="F5" x="132" y="20" width="18" height="16" rx="2" class="key"/><text x="141" y="31" text-anchor="middle" class="kl">F5</text>
+                <rect id="F6" x="152" y="20" width="18" height="16" rx="2" class="key"/><text x="161" y="31" text-anchor="middle" class="kl">F6</text>
+                <rect id="F7" x="172" y="20" width="18" height="16" rx="2" class="key"/><text x="181" y="31" text-anchor="middle" class="kl">F7</text>
+                <rect id="F8" x="192" y="20" width="18" height="16" rx="2" class="key"/><text x="201" y="31" text-anchor="middle" class="kl">F8</text>
+                <rect id="F9" x="216" y="20" width="18" height="16" rx="2" class="key"/><text x="225" y="31" text-anchor="middle" class="kl">F9</text>
+                <rect id="F10" x="236" y="20" width="18" height="16" rx="2" class="key"/><text x="245" y="31" text-anchor="middle" class="kl">F10</text>
+                <rect id="F11" x="256" y="20" width="18" height="16" rx="2" class="key"/><text x="265" y="31" text-anchor="middle" class="kl">F11</text>
+                <rect id="F12" x="276" y="20" width="18" height="16" rx="2" class="key"/><text x="285" y="31" text-anchor="middle" class="kl">F12</text>
+                <rect id="PrintScreen" x="300" y="20" width="22" height="16" rx="2" class="key"/><text x="311" y="31" text-anchor="middle" class="kls">PrtSc</text>
+                <rect id="ScrollLock" x="324" y="20" width="22" height="16" rx="2" class="key"/><text x="335" y="31" text-anchor="middle" class="kls">ScrLk</text>
+                <rect id="Pause" x="348" y="20" width="22" height="16" rx="2" class="key"/><text x="359" y="31" text-anchor="middle" class="kls">Pause</text>
+                <rect id="Backquote" x="20" y="42" width="18" height="16" rx="2" class="key"/><text x="29" y="53" text-anchor="middle" class="kl">`</text>
+                <rect id="Digit1" x="40" y="42" width="18" height="16" rx="2" class="key"/><text x="49" y="53" text-anchor="middle" class="kl">1</text>
+                <rect id="Digit2" x="60" y="42" width="18" height="16" rx="2" class="key"/><text x="69" y="53" text-anchor="middle" class="kl">2</text>
+                <rect id="Digit3" x="80" y="42" width="18" height="16" rx="2" class="key"/><text x="89" y="53" text-anchor="middle" class="kl">3</text>
+                <rect id="Digit4" x="100" y="42" width="18" height="16" rx="2" class="key"/><text x="109" y="53" text-anchor="middle" class="kl">4</text>
+                <rect id="Digit5" x="120" y="42" width="18" height="16" rx="2" class="key"/><text x="129" y="53" text-anchor="middle" class="kl">5</text>
+                <rect id="Digit6" x="140" y="42" width="18" height="16" rx="2" class="key"/><text x="149" y="53" text-anchor="middle" class="kl">6</text>
+                <rect id="Digit7" x="160" y="42" width="18" height="16" rx="2" class="key"/><text x="169" y="53" text-anchor="middle" class="kl">7</text>
+                <rect id="Digit8" x="180" y="42" width="18" height="16" rx="2" class="key"/><text x="189" y="53" text-anchor="middle" class="kl">8</text>
+                <rect id="Digit9" x="200" y="42" width="18" height="16" rx="2" class="key"/><text x="209" y="53" text-anchor="middle" class="kl">9</text>
+                <rect id="Digit0" x="220" y="42" width="18" height="16" rx="2" class="key"/><text x="229" y="53" text-anchor="middle" class="kl">0</text>
+                <rect id="Minus" x="240" y="42" width="18" height="16" rx="2" class="key"/><text x="249" y="53" text-anchor="middle" class="kl">-</text>
+                <rect id="Equal" x="260" y="42" width="18" height="16" rx="2" class="key"/><text x="269" y="53" text-anchor="middle" class="kl">=</text>
+                <rect id="Backspace" x="280" y="42" width="40" height="16" rx="2" class="key"/><text x="300" y="53" text-anchor="middle" class="kls">Backspace</text>
+                <rect id="Insert" x="326" y="42" width="22" height="16" rx="2" class="key"/><text x="337" y="53" text-anchor="middle" class="kls">Ins</text>
+                <rect id="Home" x="350" y="42" width="22" height="16" rx="2" class="key"/><text x="361" y="53" text-anchor="middle" class="kls">Home</text>
+                <rect id="PageUp" x="374" y="42" width="22" height="16" rx="2" class="key"/><text x="385" y="53" text-anchor="middle" class="kls">PgUp</text>
+                <rect id="NumLock" x="402" y="42" width="18" height="16" rx="2" class="key-dark"/><text x="411" y="53" text-anchor="middle" class="kls">Num</text>
+                <rect id="NumpadDivide" x="422" y="42" width="18" height="16" rx="2" class="key"/><text x="431" y="53" text-anchor="middle" class="kl">/</text>
+                <rect id="NumpadMultiply" x="442" y="42" width="18" height="16" rx="2" class="key"/><text x="451" y="53" text-anchor="middle" class="kl">*</text>
+                <rect id="NumpadSubtract" x="462" y="42" width="18" height="16" rx="2" class="key"/><text x="471" y="53" text-anchor="middle" class="kl">-</text>
+                <rect id="Tab" x="20" y="60" width="27" height="16" rx="2" class="key"/><text x="33" y="71" text-anchor="middle" class="kl">Tab</text>
+                <rect id="KeyQ" x="49" y="60" width="18" height="16" rx="2" class="key"/><text x="58" y="71" text-anchor="middle" class="kl">Q</text>
+                <rect id="KeyW" x="69" y="60" width="18" height="16" rx="2" class="key"/><text x="78" y="71" text-anchor="middle" class="kl">W</text>
+                <rect id="KeyE" x="89" y="60" width="18" height="16" rx="2" class="key"/><text x="98" y="71" text-anchor="middle" class="kl">E</text>
+                <rect id="KeyR" x="109" y="60" width="18" height="16" rx="2" class="key"/><text x="118" y="71" text-anchor="middle" class="kl">R</text>
+                <rect id="KeyT" x="129" y="60" width="18" height="16" rx="2" class="key"/><text x="138" y="71" text-anchor="middle" class="kl">T</text>
+                <rect id="KeyY" x="149" y="60" width="18" height="16" rx="2" class="key"/><text x="158" y="71" text-anchor="middle" class="kl">Y</text>
+                <rect id="KeyU" x="169" y="60" width="18" height="16" rx="2" class="key"/><text x="178" y="71" text-anchor="middle" class="kl">U</text>
+                <rect id="KeyI" x="189" y="60" width="18" height="16" rx="2" class="key"/><text x="198" y="71" text-anchor="middle" class="kl">I</text>
+                <rect id="KeyO" x="209" y="60" width="18" height="16" rx="2" class="key"/><text x="218" y="71" text-anchor="middle" class="kl">O</text>
+                <rect id="KeyP" x="229" y="60" width="18" height="16" rx="2" class="key"/><text x="238" y="71" text-anchor="middle" class="kl">P</text>
+                <rect id="BracketLeft" x="249" y="60" width="18" height="16" rx="2" class="key"/><text x="258" y="71" text-anchor="middle" class="kl">[</text>
+                <rect id="BracketRight" x="269" y="60" width="18" height="16" rx="2" class="key"/><text x="278" y="71" text-anchor="middle" class="kl">]</text>
+                <rect id="Backslash" x="289" y="60" width="31" height="16" rx="2" class="key"/><text x="304" y="71" text-anchor="middle" class="kl">\</text>
+                <rect id="Delete" x="326" y="60" width="22" height="16" rx="2" class="key"/><text x="337" y="71" text-anchor="middle" class="kls">Del</text>
+                <rect id="End" x="350" y="60" width="22" height="16" rx="2" class="key"/><text x="361" y="71" text-anchor="middle" class="kls">End</text>
+                <rect id="PageDown" x="374" y="60" width="22" height="16" rx="2" class="key"/><text x="385" y="71" text-anchor="middle" class="kls">PgDn</text>
+                <rect id="Numpad7" x="402" y="60" width="18" height="16" rx="2" class="key"/><text x="411" y="71" text-anchor="middle" class="kl">7</text>
+                <rect id="Numpad8" x="422" y="60" width="18" height="16" rx="2" class="key"/><text x="431" y="71" text-anchor="middle" class="kl">8</text>
+                <rect id="Numpad9" x="442" y="60" width="18" height="16" rx="2" class="key"/><text x="451" y="71" text-anchor="middle" class="kl">9</text>
+                <rect id="NumpadAdd" x="462" y="60" width="18" height="34" rx="2" class="key"/><text x="471" y="80" text-anchor="middle" class="kl">+</text>
+                <rect id="CapsLock" x="20" y="78" width="32" height="16" rx="2" class="key"/><text x="36" y="89" text-anchor="middle" class="kls">Caps</text>
+                <rect id="KeyA" x="54" y="78" width="18" height="16" rx="2" class="key"/><text x="63" y="89" text-anchor="middle" class="kl">A</text>
+                <rect id="KeyS" x="74" y="78" width="18" height="16" rx="2" class="key"/><text x="83" y="89" text-anchor="middle" class="kl">S</text>
+                <rect id="KeyD" x="94" y="78" width="18" height="16" rx="2" class="key"/><text x="103" y="89" text-anchor="middle" class="kl">D</text>
+                <rect id="KeyF" x="114" y="78" width="18" height="16" rx="2" class="key"/><text x="123" y="89" text-anchor="middle" class="kl">F</text>
+                <rect id="KeyG" x="134" y="78" width="18" height="16" rx="2" class="key"/><text x="143" y="89" text-anchor="middle" class="kl">G</text>
+                <rect id="KeyH" x="154" y="78" width="18" height="16" rx="2" class="key"/><text x="163" y="89" text-anchor="middle" class="kl">H</text>
+                <rect id="KeyJ" x="174" y="78" width="18" height="16" rx="2" class="key"/><text x="183" y="89" text-anchor="middle" class="kl">J</text>
+                <rect id="KeyK" x="194" y="78" width="18" height="16" rx="2" class="key"/><text x="203" y="89" text-anchor="middle" class="kl">K</text>
+                <rect id="KeyL" x="214" y="78" width="18" height="16" rx="2" class="key"/><text x="223" y="89" text-anchor="middle" class="kl">L</text>
+                <rect id="Semicolon" x="234" y="78" width="18" height="16" rx="2" class="key"/><text x="243" y="89" text-anchor="middle" class="kl">;</text>
+                <rect id="Quote" x="254" y="78" width="18" height="16" rx="2" class="key"/><text x="263" y="89" text-anchor="middle" class="kl">'</text>
+                <rect id="Enter" x="274" y="78" width="46" height="16" rx="2" class="key"/><text x="297" y="89" text-anchor="middle" class="kl">Enter</text>
+                <rect id="Numpad4" x="402" y="78" width="18" height="16" rx="2" class="key"/><text x="411" y="89" text-anchor="middle" class="kl">4</text>
+                <rect id="Numpad5" x="422" y="78" width="18" height="16" rx="2" class="key"/><text x="431" y="89" text-anchor="middle" class="kl">5</text>
+                <rect id="Numpad6" x="442" y="78" width="18" height="16" rx="2" class="key"/><text x="451" y="89" text-anchor="middle" class="kl">6</text>
+                <rect id="ShiftLeft" x="20" y="96" width="42" height="16" rx="2" class="key"/><text x="41" y="107" text-anchor="middle" class="kl">Shift</text>
+                <rect id="KeyZ" x="64" y="96" width="18" height="16" rx="2" class="key"/><text x="73" y="107" text-anchor="middle" class="kl">Z</text>
+                <rect id="KeyX" x="84" y="96" width="18" height="16" rx="2" class="key"/><text x="93" y="107" text-anchor="middle" class="kl">X</text>
+                <rect id="KeyC" x="104" y="96" width="18" height="16" rx="2" class="key"/><text x="113" y="107" text-anchor="middle" class="kl">C</text>
+                <rect id="KeyV" x="124" y="96" width="18" height="16" rx="2" class="key"/><text x="133" y="107" text-anchor="middle" class="kl">V</text>
+                <rect id="KeyB" x="144" y="96" width="18" height="16" rx="2" class="key"/><text x="153" y="107" text-anchor="middle" class="kl">B</text>
+                <rect id="KeyN" x="164" y="96" width="18" height="16" rx="2" class="key"/><text x="173" y="107" text-anchor="middle" class="kl">N</text>
+                <rect id="KeyM" x="184" y="96" width="18" height="16" rx="2" class="key"/><text x="193" y="107" text-anchor="middle" class="kl">M</text>
+                <rect id="Comma" x="204" y="96" width="18" height="16" rx="2" class="key"/><text x="213" y="107" text-anchor="middle" class="kl">,</text>
+                <rect id="Period" x="224" y="96" width="18" height="16" rx="2" class="key"/><text x="233" y="107" text-anchor="middle" class="kl">.</text>
+                <rect id="Slash" x="244" y="96" width="18" height="16" rx="2" class="key"/><text x="253" y="107" text-anchor="middle" class="kl">/</text>
+                <rect id="ShiftRight" x="264" y="96" width="56" height="16" rx="2" class="key"/><text x="292" y="107" text-anchor="middle" class="kl">Shift</text>
+                <rect id="ArrowUp" x="350" y="96" width="22" height="16" rx="2" class="key"/><text x="361" y="107" text-anchor="middle" class="kl">&#x25B2;</text>
+                <rect id="Numpad1" x="402" y="96" width="18" height="16" rx="2" class="key"/><text x="411" y="107" text-anchor="middle" class="kl">1</text>
+                <rect id="Numpad2" x="422" y="96" width="18" height="16" rx="2" class="key"/><text x="431" y="107" text-anchor="middle" class="kl">2</text>
+                <rect id="Numpad3" x="442" y="96" width="18" height="16" rx="2" class="key"/><text x="451" y="107" text-anchor="middle" class="kl">3</text>
+                <rect id="NumpadEnter" x="462" y="96" width="18" height="34" rx="2" class="key"/><text x="471" y="116" text-anchor="middle" class="kl">&#x21B5;</text>
+                <rect id="ControlLeft" x="20" y="114" width="28" height="16" rx="2" class="key"/><text x="34" y="125" text-anchor="middle" class="kls">Ctrl</text>
+                <rect id="MetaLeft" x="50" y="114" width="22" height="16" rx="2" class="key"/><text x="61" y="125" text-anchor="middle" class="kl">&#x229E;</text>
+                <rect id="AltLeft" x="74" y="114" width="22" height="16" rx="2" class="key"/><text x="85" y="125" text-anchor="middle" class="kl">Alt</text>
+                <rect id="Space" x="98" y="114" width="120" height="16" rx="2" class="key"/>
+                <rect id="AltRight" x="220" y="114" width="22" height="16" rx="2" class="key"/><text x="231" y="125" text-anchor="middle" class="kl">Alt</text>
+                <rect id="MetaRight" x="244" y="114" width="22" height="16" rx="2" class="key"/><text x="255" y="125" text-anchor="middle" class="kl">&#x229E;</text>
+                <rect id="ContextMenu" x="268" y="114" width="22" height="16" rx="2" class="key"/><text x="279" y="125" text-anchor="middle" class="kl">&#x2630;</text>
+                <rect id="ControlRight" x="292" y="114" width="28" height="16" rx="2" class="key"/><text x="306" y="125" text-anchor="middle" class="kls">Ctrl</text>
+                <rect id="ArrowLeft" x="326" y="114" width="22" height="16" rx="2" class="key"/><text x="337" y="125" text-anchor="middle" class="kl">&#x25C4;</text>
+                <rect id="ArrowDown" x="350" y="114" width="22" height="16" rx="2" class="key"/><text x="361" y="125" text-anchor="middle" class="kl">&#x25BC;</text>
+                <rect id="ArrowRight" x="374" y="114" width="22" height="16" rx="2" class="key"/><text x="385" y="125" text-anchor="middle" class="kl">&#x25BA;</text>
+                <rect id="Numpad0" x="402" y="114" width="38" height="16" rx="2" class="key"/><text x="421" y="125" text-anchor="middle" class="kl">0</text>
+                <rect id="NumpadDecimal" x="442" y="114" width="18" height="16" rx="2" class="key"/><text x="451" y="125" text-anchor="middle" class="kl">.</text>
+                </svg>
+            </div>
+    </main>
+    <footer>
+        <button id="themeButton"></button>
+    </footer>

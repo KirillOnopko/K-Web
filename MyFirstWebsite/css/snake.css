@@ -1,0 +1,17 @@
+main {
+    text-align: center;
+}
+
+#field {
+    width: 30rem;
+    height: 30rem;
+    border: 0.25rem solid;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(15, 2rem);
+    grid-template-rows: repeat(15, 2rem);
+    gap: 0;
+}
+
+
